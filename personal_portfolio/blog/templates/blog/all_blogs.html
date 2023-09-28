@@ -1,26 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blogs</title>
-</head>
-<body style="background-color: #9fcee3;">
-    <div style="text-align: center">
-        <h1 style="font-size:80px; font-weight: bold;">Blog</h1>
-        <p style="font-size: 46px; padding: 10px; font-style: italic;">Yuriy was writen blogs</p>
+{% extends 'portfolio/layout.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="title_blog">Блог</h1>
         <br>
 
+        <h2>Юрий написал {{ blogs.count }} статьи </h2>
 
-        {% for blog in blogs %}
-        <h1> {{ blog.title }}</h1>
-        <h5>{{ blog.date }}</h5>
-        <h3>{{ blog.description }}</h3>
-        {% endfor %}
+        <div class="info_blog">
+            {% for blog in blogs %}
+            <a href="{% url 'blog:detail' blog.id%}"><h1> {{ blog.title }}</h1></a>
+            <h5>{{ blog.date | date:'d M Y'}}</h5>
+            <h3>{{ blog.description| striptags | truncatechars:100  }}</h3>
+            {% endfor %}
+        </div>
 
     </div>
 
-</body>
-</html>
+{% endblock %}

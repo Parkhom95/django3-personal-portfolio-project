@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная страница</title>
+
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static "portfolio/css/style.css" %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'portfolio/img/icon.png' %}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+
+  </head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+      <div class="logo">
+            <a class="navbar-brand" href="{% url "home" %}"> <img class="logo" src="{% static 'portfolio/img/icon.png' %}" alt="">Yuriy Parkhom</a>
+      </div>
+
+      <div class="navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a href="{% static 'portfolio/file/resume.pdf' %}" class="nav-link" aria-disabled="true" target="_blank">Резюме</a>
+              </li>
+
+              <li class="nav-item">
+                  <a href="https://vk.ru/id783451055" class="nav-link" target="_blank">Вконтакте</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'blog:all_blogs' %}" target="_blank"><button class="btn btn-primary">Blog</button></a>
+              </li>
+          </ul>
+    </div>
+  </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+        <div class="footer">
+
+            <span>2023 &copy Parkhom Yuriy </span>
+
+        </div>
+</body>
+</html>

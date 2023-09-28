@@ -1,0 +1,114 @@
+body {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.navbar {
+    border-radius: 50px;
+}
+
+
+.navbar-collapse {
+    justify-content: end;
+}
+
+img.logo{
+    padding-right: 10px;
+    height: 60px;
+    width: 60px;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    color: #2a2828;
+}
+
+.btn-primary {
+    margin-top: -6px;
+}
+.container {
+    display: block;
+    max-width: 1200px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+.title {
+    margin-bottom: 50px;
+    color: black;
+    font-family: "Georgia";
+    font-size: 70px;
+}
+.container p {
+    font-family: Georgia;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.container img {
+    width: 360px;
+    margin-bottom: 50px;
+
+}
+.portfolio {
+    margin: auto;
+    max-width: 1200px;
+}
+.portfolio h1 {
+    border-top: #2a2828 2px solid;
+    padding: 20px;
+}
+.portfolio_blocs {
+    margin-top: 50px;
+    display:flex;
+    flex-direction: row;
+    max-width: 100%;
+
+}
+
+.portfolio_info {
+    max-height: 250px;
+    width: 30%;
+    margin-right: 5px;
+    border: rgba(0, 0, 0, 0.1) 1px solid;
+    margin-bottom: 20px;
+}
+
+.portfolio_info img {
+    width: 100%;
+    position: static;
+    max-width: 400px;
+    max-height: 220px;
+
+
+}
+.portfolio_blocs h2 {
+    font-size: 20px;
+}
+
+.footer {
+    border-radius: 50px;
+    margin-top: 60px;
+    background-color: #d9e8ff;
+    padding: 25px;
+}
+
+.title_blog {
+    margin-bottom: 30px;
+    color: black;
+    font-family: "Georgia";
+    font-size: 70px;
+}
+.info_blog {
+    margin-top: 30px;
+    text-align: left;
+    width: 50%;
+
+}
+
+.blog_detail {
+    margin-top: 30px;
+    font-family: Georgia;
+    font-size: 20px;
+    text-align: left;
+}

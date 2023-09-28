@@ -6,3 +6,5 @@ class Project(models.Model):
     image = models.ImageField(upload_to='portfolio/images/') # Изображение параметр сохранения в указанную дирректорию
     url = models.URLField(blank=True)   # Ссылка, параметр отвечает за открытие в новой вкладке
 
+    def __str__(self):
+        return self.title
